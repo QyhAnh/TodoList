@@ -1,38 +1,74 @@
-.App {
+.app {
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  margin: 10px 0;
+  background: #f3f3f3;
+  border-radius: 5px;
+}
+
+.todo.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo .icon {
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
   color: white;
+  cursor: pointer;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.todo .icon:hover {
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-list {
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add_text {
+  padding: 10px;
+  border: none;
+  background: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add_text:hover {
+  background: darkblue;
+}
+
+.filter_button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgb(138, 213, 234);
+  margin-left: 20px;
 }
